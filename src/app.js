@@ -96,7 +96,7 @@ poitTuristicRoutes.route('/delete/:id').delete(function (req, res) {
 
 mongoose.Promise = global.Promise;
 // Conectar ao banco de dados MongoDB
-mongoose.connect('mongodb+srv://rafael344355:ndTwvS5JFefCMrBd@boraalidb.paquwbm.mongodb.net/', { useNewUrlParser: true , useUnifiedTopology: true }).then(
+mongoose.connect('mongodb+srv://rafael344355:ndTwvS5JFefCMrBd@boraalidb.paquwbm.mongodb.net/BoraAliDB', { useNewUrlParser: true , useUnifiedTopology: true }).then(
   () => {console.log('Banco de dados conectado') },
   err => { console.log('Não foi possível conectar ao banco de dados'+ err)}
 );

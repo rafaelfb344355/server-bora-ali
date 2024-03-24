@@ -100,9 +100,10 @@ var app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/',
-  console.log('hello world')
- );
+app.use('/', function(req, res, next) {
+  console.log('hello world');
+  next(); // Chama o próximo middleware na pilha
+});
 // Rota principal
 app.use('/poitTuristic', poitTuristicRoutes);
 

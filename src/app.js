@@ -24,7 +24,7 @@ const PoitTuristicSchema = new mongoose.Schema({
   collection: 'PoitTuristic'
 });
 
-const PoitTuristic = mongoose.model('PoitTuristic', PoitTuristicSchema);
+
 
 // api para adicionar ponto turístico
 poitTuristicRoutes.route('/add').post(function (req, res) {

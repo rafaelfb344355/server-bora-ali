@@ -101,6 +101,9 @@ mongoose.connect('mongodb+srv://rafael344355:ndTwvS5JFefCMrBd@boraalidb.paquwbm.
   err => { console.log('Não foi possível conectar ao banco de dados'+ err)}
 );
 
+const User= require('../model/User');
+
+
 var app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -108,6 +111,10 @@ app.use(cors());
 
 // Rota principal
 app.use('/poitTuristic', poitTuristicRoutes);
+app.use('/user', UserRoute);
+
+app.get('/', UserRoute);
+app.get("/user/:id",UserRoute);
 
 app.listen(Port, function(){
     console.log('Escutando na porta ' + Port);
